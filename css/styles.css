@@ -97,19 +97,39 @@ main {
   text-decoration: none;
 }
 
+.main-nav__item:last-child {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .main-nav__item {
+    display: none;
+  }
+  .main-nav__item:last-child {
+    display: block;
+  }
+
+  .responsive .main-nav__item {
+    display: block;
+    text-align: left;
+    margin: 1rem 0;
+  }
+
+  .responsive .main-nav {
+    display: block;
+  }
+  .responsive .main-nav__item:last-child {
+    position: absolute;
+    right: 40px;
+    top: 6px;
+  }
+}
+
 .main-header__logo {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
-}
-
-.main-nav__item ::before {
-  content: "\2022";
-}
-
-.main-nav__item--login a::before {
-  content: none;
 }
 
 #how-it-works h2 {
@@ -293,6 +313,7 @@ footer li {
 .fa-solid {
   padding: 10px;
   border-radius: 50%;
+  color: white;
 }
 
 .fa-brands:hover,
